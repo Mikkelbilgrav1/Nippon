@@ -4,6 +4,24 @@ body {
     padding: 0;
 }
 
+.navbar {
+  position: fixed; /* Make the navbar fixed at the top */
+  top: 2%;
+  left: 0%;
+  right: 0%;
+  width: 100%;
+  background-color: transparent; /* Make the navbar transparent */
+  z-index: 1000; /* Ensure the navbar is on top of other elements */
+}
+
+.container {
+  max-width: 100%; /* Set a maximum width for the container */
+  margin: 1% 1% auto; /* Center the container horizontally */
+  display: flex; /* Use flexbox to layout the navbar content */
+  justify-content: space-between; /* Space out the navbar content evenly */
+  /* align-items: center; /* Vertically center the navbar content */
+}
+
 .burger-icon {
     width: 30px;
     height: 30px;
@@ -13,7 +31,7 @@ body {
     cursor: pointer;
     padding: 10px;
     transition: transform 0.3s ease;
-    position: fixed;
+    /* position: fixed; */
     top: 10px;
     left: 10px;
     z-index: 1001;

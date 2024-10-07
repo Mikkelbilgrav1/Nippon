@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const burgerIcon = document.querySelector('#burger-icon');
-  const closeIcon = document.querySelector('#close-icon');
+  const burgerIcon = document.querySelector('burger-icon');
+  const closeIcon = document.querySelector('close-icon');
   const menuOverlay = document.getElementById('menu-overlay');
   const body = document.body;
 
