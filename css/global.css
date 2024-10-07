@@ -184,3 +184,81 @@ nav a {
   margin-top: 5px;
 }
 
+/*Footer section*/
+footer{
+  background-color: #434343;
+  color: #DFCFC2;
+  padding: 20px;
+}
+
+.footer-content{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.social-media h4, .kontakt h4, .nyhedsbrev h4{
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #DFCFC2;
+  text-align: center;
+  font-family: Teko;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.social-media a{
+  margin: 0 10px;
+}
+
+.kontakt{
+  text-align:center;
+}
+
+.nyhedsbrev{
+  text-align: center;
+}
+
+.nyhedsbrev p{
+font-family: "Sen", sans-serif;
+font-optical-sizing: auto;
+font-style: normal;
+}
+
+.nyhedsbrev form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-family: "Sen", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.nyhedsbrev input{
+  padding: 10px;
+  /*border-radius: 5px;*/
+  border: none;
+  font-size: 1em;
+}
+
+.nyhedsbrev button {
+  background-color: #3272B8;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  /*border-radius: 5px;*/
+  font-size: 1em;
+  cursor: pointer;
+  font-family: "Sen", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.nyhedsbrev button:hover {
+  background-color: #7BB1EC;
+}
