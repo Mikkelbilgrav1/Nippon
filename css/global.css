@@ -1,46 +1,186 @@
+/* Global Reset */
 * {
-    margin: 0;
+  margin: 0;
 }
 
+/* Import Teko and Sen fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&family=Sen:wght@400;700&display=swap');
+
+/* General Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar Styling */
 .navbar {
-    position: fixed; /* Make the navbar fixed at the top */
-    top: 3%;
-    left: 0%;
-    right: 0%;
-    width: 100%;
-    background-color: transparent; /* Make the navbar transparent */
-    z-index: 1000; /* Ensure the navbar is on top of other elements */
-  }
-  
-  .container {
-    max-width: 100%; /* Set a maximum width for the container */
-    margin: 0 auto; /* Center the container horizontally */
-    display: flex; /* Use flexbox to layout the navbar content */
-    justify-content: space-between; /* Space out the navbar content evenly */
-    align-items: center; /* Vertically center the navbar content */
-  }
-  
-  .burger-menu {
-    /* Add styles for the burger menu here */
-    margin-left: 3%;
-  }
+  position: fixed; /* Make the navbar fixed at the top */
+  top: 3%;
+  left: 0%;
+  right: 0%;
+  width: 100%;
+  background-color: transparent; /* Make the navbar transparent */
+  z-index: 1000; /* Ensure the navbar is on top of other elements */
+}
 
-  .burgerbillede {
-    width: 75%;
-    height: auto;
-  }
-  
-  .logo {
-    /* Add styles for the logo here */
-  }
-  
-  .shopping-cart {
-    /* Add styles for the shopping cart here */
-    margin-right: 3%;
-  }
+.container {
+  max-width: 100%; /* Set a maximum width for the container */
+  margin: 0 auto; /* Center the container horizontally */
+  display: flex; /* Use flexbox to layout the navbar content */
+  justify-content: space-between; /* Space out the navbar content evenly */
+  align-items: center; /* Vertically center the navbar content */
+}
 
-  .video {
-    width: 100%;
-    height: auto;
-  }
-  
+.burger-menu {
+  margin-left: 3%;
+}
+
+.burgerbillede {
+  width: 75%;
+  height: auto;
+}
+
+.logo {
+  /* Add styles for the logo here */
+}
+
+.shopping-cart {
+  margin-right: 3%;
+}
+
+/* Video Styling */
+.video {
+  width: 100%;
+  height: auto;
+}
+
+/* Menu Overlay Styling */
+#menu-overlay {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  max-width: 400px;
+  height: 100%;
+  background-color: white;
+  z-index: 1000;
+  transition: left 0.3s ease-in-out;
+  overflow-y: auto;
+  border: 2px solid #000;
+  box-sizing: border-box;
+}
+
+#menu-overlay.active {
+  left: 0;
+}
+
+#menu-content {
+  padding: 60px 40px 20px;
+}
+
+#menu-header {
+  position: relative;
+  padding: 20px 20px 0;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 30px;
+}
+
+#close-menu {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 32px;
+  cursor: pointer;
+  z-index: 1001;
+  margin-right: 15px;
+}
+
+#burger-icon,
+#close-menu {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  z-index: 1001;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  font-size: 36px;
+}
+
+#burger-icon {
+  background-image: url('images/burgermenu-ikon.png');
+}
+
+#close-menu {
+  background-image: url('images/close-icon.png');
+  opacity: 0;
+  transform: rotate(-90deg) scale(0);
+  pointer-events: none;
+}
+
+/* Search Bar Styling */
+#search-bar {
+  position: absolute;
+  top: -32px;
+  left: 60px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  padding: 2px 8px;
+}
+
+#search-bar input {
+  border: none;
+  outline: none;
+  width: calc(100% - 20px);
+  font-size: 14px;
+}
+
+#search-icon {
+  width: 14px;
+  height: 14px;
+  background-image: url(images/søg-ikon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-left: 5px;
+}
+
+/* Navigation Menu Styling */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin-left: 20px;
+}
+
+nav li {
+  margin-bottom: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Teko', sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.submenu {
+  display: block;
+  font-family: 'Sen', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #666;
+  margin-top: 5px;
+}
+
