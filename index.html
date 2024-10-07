@@ -1,43 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Combined Page</title>
     <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <nav class="navbar">
         <div class="container">
-          <div class="burger-menu">
-            <!-- Burger menu content here -->
-             <div>
-                <a href="">
-                <img src="img/burgermenu.svg" alt="burgermenu" class="burgerbillede">
+            <div class="burger-menu" id="burger-icon">
+                <!-- Burger menu icon -->
+                <a href="#">
+                    <img src="img/burgermenu.svg" alt="burgermenu" class="burgerbillede">
                 </a>
-             </div>
-          </div>
-          <div class="logo">
-            <!-- Logo image or text here -->
-            <div>
-                <a href="">
-                <img src="img/logo.svg" alt="logo" class="burgerbillede">
+            </div>
+            <div class="logo">
+                <!-- Logo image -->
+                <a href="#">
+                    <img src="img/logo.svg" alt="logo" class="burgerbillede">
                 </a>
-             </div>
-          </div>
-          <div class="shopping-cart">
-            <!-- Shopping cart content here -->
-            <div>
-                <a href="">
-                <img src="img/indkoebskurv.svg" alt="indkøbskurv" class="burgerbillede">
+            </div>
+            <div class="shopping-cart">
+                <!-- Shopping cart icon -->
+                <a href="#">
+                    <img src="img/indkoebskurv.svg" alt="indkøbskurv" class="burgerbillede">
                 </a>
-             </div>
-          </div>
+            </div>
         </div>
-      </nav>
+    </nav>
 
-    
-      <div class="video-container">
+    <div id="menu-overlay">
+        <div id="menu-content">
+            <div id="menu-header">
+                <span id="close-menu">×</span>
+                <div id="search-bar">
+                    <input type="text" placeholder="SØG HER!">
+                    <span id="search-icon"></span>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Forside</a></li>
+                    <li>
+                        <a href="#">Måltidskasser</a>
+                        <span class="submenu">Opskrifter<br>Sådan fungerer det</span>
+                    </li>
+                    <li>
+                        <a href="#">Abonnementer</a>
+                        <span class="submenu">Studierabat</span>
+                    </li>
+                    <li>
+                        <a href="#">Om Nippon</a>
+                        <span class="submenu">Kontakt</span>
+                    </li>
+                    <li><a href="#">Log Ind</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="video-container">
         <video autoplay loop muted class="video">
             <source src="video/forsidevideo.mp4" type="video/mp4">
         </video>
@@ -58,8 +84,7 @@
         </div>
     </div>
 
-
     <script src="script.js"></script>
-    
 </body>
+
 </html>
