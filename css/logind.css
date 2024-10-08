@@ -100,8 +100,8 @@ input[type="password"] {
 
 .separator span {
     font-family: 'Teko', sans-serif;
-    padding: 5rem 0;
-    font-size: 2rem;
+    padding: 10rem 0;
+    font-size: 2.5rem;
     font-weight: bold;
 }
 
@@ -132,21 +132,21 @@ input[type="password"] {
 }
 
 .noodles {
-    top: 35%;
-    left: 19.5%;
-    width: 180px;
+    top: 30%;
+    left: 14.5%;
+    width: 350px;
 }
 
 .rice-bowl {
-    top: 3.9%;
+    top: 3.6%;
     right: 29.5%;
     width: 250px;
 }
 
 .sushi {
-    bottom: 5%;
-    left: 5%;
-    width: 80px;
+    bottom: -1.5%;
+    left: 29.5%;
+    width: 250px;
 }
 
 .sushi-stack {
