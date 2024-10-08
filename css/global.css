@@ -337,3 +337,226 @@ font-style: normal;
   background-color: #7BB1EC;
 }
 
+ /*Burgerogfoot indhold*/
+ 
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+position: fixed; /* Make the navbar fixed at the top */
+top: 2%;
+left: 0%;
+right: 0%;
+width: 100%;
+background-color: transparent; /* Make the navbar transparent */
+z-index: 1000; /* Ensure the navbar is on top of other elements */
+}
+
+.container {
+max-width: 100%; /* Set a maximum width for the container */
+margin: 1% 1% auto; /* Center the container horizontally */
+margin-right: 0;
+display: flex; /* Use flexbox to layout the navbar content */
+justify-content: space-between; /* Space out the navbar content evenly */
+align-items: center; /* Vertically center the navbar content */
+}
+
+.ikoner img, .logo img {
+width: 75%;
+height: auto;
+max-width: 100%; /* Adjust this value as needed */
+transition: all 0.3s ease;
+}
+
+.logo img {
+width: 85%;
+}
+
+.burger-icon {
+  /* width: 100%;
+  height: auto; */
+  /* background: url('images/burgermenu-ikon.png') no-repeat center center; */
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  /*padding: 10px;*/
+  transition: transform 0.3s ease;
+  /* position: fixed; */
+  top: 10px;
+  left: 10px;
+  z-index: 1001;
+  /* margin-top: 15px;
+  margin-left: 15px; */
+}
+
+.burger-icon.active {
+  transform: rotate(90deg);
+  background: url('path/to/your/close-icon.png') no-repeat center center;
+  background-size: contain;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: -100%; 
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  background-color: #f9f6f1;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  border-right: 1px solid #000000;
+  transition: left 0.3s ease; /*transition */
+}
+
+.menu-overlay.active {
+  left: 0; 
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.close-btn {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  padding: 5px 10px;
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+}
+
+.search-btn {
+  width: 20px;
+  height: 20px;
+  background: url('path/to/your/search-icon.png') no-repeat center center;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-items {
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.menu-items h2 {
+  margin: 20px 0 10px;
+  font-size: 30px;
+  font-family: 'Teko', sans-serif;
+}
+
+.menu-items ul {
+  list-style-type: none;
+  padding-left: 20px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.menu-items li {
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-family: 'Sen', sans-serif;
+}
+
+
+/*Footer section*/
+footer{
+  background-color: #434343;
+  color: #DFCFC2;
+  padding: 20px;
+}
+
+.footer-content{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.social-media h4, .kontakt h4, .nyhedsbrev h4{
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #DFCFC2;
+  text-align: center;
+  font-family: Teko;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.social-media a{
+  margin: 0 10px;
+}
+
+.kontakt{
+  text-align:center;
+}
+
+.nyhedsbrev{
+  text-align: center;
+}
+
+.nyhedsbrev p{
+font-family: "Sen", sans-serif;
+font-optical-sizing: auto;
+font-style: normal;
+}
+
+.nyhedsbrev form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-family: "Sen", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.nyhedsbrev input{
+  padding: 10px;
+  /*border-radius: 5px;*/
+  border: none;
+  font-size: 1em;
+}
+
+.nyhedsbrev button {
+  background-color: #3272B8;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  /*border-radius: 5px;*/
+  font-size: 1em;
+  cursor: pointer;
+  font-family: "Sen", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.nyhedsbrev button:hover {
+  background-color: #7BB1EC;
+}
