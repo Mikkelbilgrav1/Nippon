@@ -1,33 +1,6 @@
-/* document.addEventListener('DOMContentLoaded', () => {
-    const burgerIcon = document.querySelector('.burger-icon');
-    const menuOverlay = document.querySelector('.menu-overlay');
-    const closeBtn = document.getElementById('close-icon');
-
-
-    function toggleMenu() {
-        menuOverlay.classList.toggle('active');
-        burgerIcon.classList.toggle('active');
-    }
-
-    function closeMenu() {
-        menuOverlay.classList.remove('active');
-        burgerIcon.classList.remove('active');
-    }
-
-    burgerIcon.addEventListener('click', toggleMenu);
-    closeBtn.addEventListener('click', closeMenu);
-
-    // Close menu when clicking outside
-    document.addEventListener('click', (event) => {
-        if (!menuOverlay.contains(event.target) && !burgerIcon.contains(event.target) && menuOverlay.classList.contains('active')) {
-            closeMenu();
-        }
-    });
-}); */
-
 document.addEventListener('DOMContentLoaded', function() {
-    const burgerIcon = document.querySelector('.burger-icon');
-    const menuOverlay = document.querySelector('.menu-overlay');
+    const burgerIcon = document.getElementById('burger-icon');
+    const menuOverlay = document.getElementById('menu-overlay');
     const closeBtn = document.getElementById('close-icon');
     const indkoebIcon = document.getElementById('indkoeb-icon');
     const indkoebOverlay = document.getElementById('indkoeb-overlay');
@@ -53,21 +26,38 @@ document.addEventListener('DOMContentLoaded', function() {
         indkoebIcon.classList.remove('active');
     }
 
-    burgerIcon.addEventListener('click', toggleMenu);
-    closeBtn.addEventListener('click', closeMenu);
-    indkoebIcon.addEventListener('click', toggleIndkoeb);
-    closeIndkoebIcon.addEventListener('click', closeIndkoeb);
+    if (burgerIcon) {
+        burgerIcon.addEventListener('click', toggleMenu);
+        console.log('Burger icon click listener added');
+    }
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeMenu);
+        console.log('Close button click listener added');
+    }
+
+    if (indkoebIcon) {
+        indkoebIcon.addEventListener('click', toggleIndkoeb);
+        console.log('Indkoeb icon click listener added');
+    }
+
+    if (closeIndkoebIcon) {
+        closeIndkoebIcon.addEventListener('click', closeIndkoeb);
+        console.log('Close indkoeb icon click listener added');
+    }
 
     // Close menu when clicking outside
     document.addEventListener('click', (event) => {
-        if (!menuOverlay.contains(event.target) && !burgerIcon.contains(event.target) && menuOverlay.classList.contains('active')) {
+        if (menuOverlay && burgerIcon && !menuOverlay.contains(event.target) && !burgerIcon.contains(event.target) && menuOverlay.classList.contains('active')) {
             closeMenu();
         }
     });
 
     document.addEventListener('click', (event) => {
-        if (!indkoebOverlay.contains(event.target) && !indkoebIcon.contains(event.target) && indkoebOverlay.classList.contains('active')) {
+        if (indkoebOverlay && indkoebIcon && !indkoebOverlay.contains(event.target) && !indkoebIcon.contains(event.target) && indkoebOverlay.classList.contains('active')) {
             closeIndkoeb();
         }
     });
+
+    console.log('Script loaded and executed');
 });

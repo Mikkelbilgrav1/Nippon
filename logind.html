@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nippon Menu</title>
     <link rel="stylesheet" href="burgerogfoot.css">
-    <link rel="stylesheet" href="logind.css">
-    <script src="burgerogfoot.js"></script>
+    <link rel="stylesheet" href="css/logind.css">
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&family=Sen:wght@400;700&display=swap" rel="stylesheet">
 
@@ -34,6 +33,95 @@
         </div>
     </nav>
 
+    <main>
+        <div class="login-container">
+            <div class="form-container register-form">
+                <h2>Registrer</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="fornavn"><img src="images/bruger-ikon.png" alt="User Icon" class="form-icon">Fornavn</label>
+                        <input type="text" id="fornavn" name="fornavn" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="efternavn"><img src="images/bruger-ikon.png" alt="User Icon" class="form-icon">Efternavn</label>
+                        <input type="text" id="efternavn" name="efternavn" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email"><img src="images/mail-ikon.png" alt="Email Icon" class="form-icon">Mail</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="adresse"><img src="images/adresse-ikon.png" alt="Address Icon" class="form-icon">Adresse</label>
+                        <input type="text" id="adresse" name="adresse" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefon"><img src="images/tlf-ikon.png" alt="Phone Icon" class="form-icon">Telefon nr.</label>
+                        <input type="tel" id="telefon" name="telefon" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="kodeord"><img src="images/lås-ikon.png" alt="Lock Icon" class="form-icon">Kodeord</label>
+                        <input type="password" id="kodeord" name="kodeord" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Opret dig</button>
+                </form>
+            </div>
+
+            <div class="separator">
+                <span>Eller</span>
+            </div>
+
+            <div class="form-container login-form">
+                <h2>Log Ind</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="login-telefon"><img src="images/tlf-ikon.png" alt="Phone Icon" class="form-icon">Telefon nr.</label>
+                        <input type="tel" id="login-telefon" name="login-telefon" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-kodeord"><img src="images/lås-ikon.png" alt="Lock Icon" class="form-icon">Kodeord</label>
+                        <input type="password" id="login-kodeord" name="login-kodeord" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Log ind</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="decorative-images">
+            <img src="images/ramen.png" alt="Noodles" class="decorative-image noodles">
+            <img src="images/ris.png" alt="Rice Bowl" class="decorative-image rice-bowl">
+            <img src="images/sushi.png" alt="Sushi" class="decorative-image sushi">
+            <img src="images/sushi2.png" alt="Sushi Stack" class="decorative-image sushi-stack">
+            <img src="images/madillustration.png" alt="Soup Bowl" class="decorative-image soup-bowl">
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-media">
+                <h4>Lad dig inspirere</h4>
+                <a href="#"><img src="images/tiktok-icon.png" alt="TikTok"></a>
+                <a href="#"><img src="images/youtube-icon.png" alt="YouTube"></a>
+                <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
+                <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
+            </div>
+
+            <div class="kontakt">
+                <h4>Kontakt os</h4>
+                <a href="#"><img src="images/telefon-icon copy.png" alt="Telefon"></a>
+            </div>
+
+            <div class="nyhedsbrev">
+                <h4>Spar 10% på din bestilling</h4>
+                <p>Når du tilmelder dig NIPPON's nyhedsbrev, får du en 10% rabatkode i velkomstgave til brug ved dit næste køb</p>
+                <form>
+                    <input type="text" placeholder="Dit navn">
+                    <input type="email" placeholder="Dit email">
+                    <button type="submit">Spar 10%</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+    <script src="burgerogfoot.js"></script>
     <div class="menu-overlay" id="menu-overlay">
         <div class="menu-header">
             <button class="close-btn" id="close-icon">✕</button>
@@ -84,38 +172,5 @@
             <button class="go-to-cart-btn">Gå til kurv</button>
         </div>
     </div>
-
-<main>
-
-</main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="social-media">
-                <h4>Lad dig inspirere</h4>
-                <a href="#"><img src="images/tiktok-icon.png" alt="TikTok"></a>
-                <a href="#"><img src="images/youtube-icon.png" alt="YouTube"></a>
-                <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
-                <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
-            </div>
-
-            <div class="kontakt">
-                <h4>Kontakt os</h4>
-                <a href="#"><img src="images/telefon-icon copy.png" alt="Telefon"></a>
-            </div>
-
-            <div class="nyhedsbrev">
-                <h4>Spar 10% på din bestilling</h4>
-                <p>Når du tilmelder dig NIPPON's nyhedsbrev, får du en 10% rabatkode i velkomstgave til brug ved dit næste køb</p>
-                <form>
-                    <input type="text" placeholder="Dit navn">
-                    <input type="email" placeholder="Dit email">
-                    <button type="submit">Spar 10%</button>
-                </form>
-            </div>
-        </div>
-    </footer>
-
-
 </body>
 </html>

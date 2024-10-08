@@ -1,0 +1,259 @@
+body {
+    background-color: #f9f6f1;
+    font-family: 'Sen', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 2rem;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4rem;
+    width: 100%;
+    max-width: 800px;
+    z-index: 1;
+    margin: 200px auto 80px; /* Increased top margin to 180px */
+    padding: 0 100px;
+    position: relative;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 2rem;
+    border: 1px solid #000;
+    width: 300px;
+    font-family: 'Teko', sans-serif; /* Add this line */
+}
+
+.form-container h2 {
+    font-family: 'Teko', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.2rem; /* Adjust size as needed */
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.form-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+    font-family: 'Teko', sans-serif;
+    font-size: 1rem; /* Adjust size as needed */
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.2rem; /* Adjust size as needed */
+    background-color: #f0f0f0;
+    color: #000;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.separator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 2rem;
+    position: relative;
+}
+
+.separator span {
+    font-family: 'Teko', sans-serif;
+    padding: 5rem 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.separator::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.decorative-images {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.decorative-image {
+    position: absolute;
+}
+
+.noodles {
+    top: 35%;
+    left: 19.5%;
+    width: 180px;
+}
+
+.rice-bowl {
+    top: 3.9%;
+    right: 29.5%;
+    width: 250px;
+}
+
+.sushi {
+    bottom: 5%;
+    left: 5%;
+    width: 80px;
+}
+
+.sushi-stack {
+    bottom: 10%;
+    right: 5%;
+    width: 120px;
+}
+
+.soup-bowl {
+    top: 73.4%;
+    left: 83%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+}
+
+/* Add new decorative elements */
+.chopsticks {
+    top: 40%;
+    left: 2%;
+    width: 80px;
+    transform: rotate(-45deg);
+}
+
+.sushi-stack {
+    bottom: 19%;
+    right: 43%;
+    width: 270px;
+}
+
+footer {
+    background-color: #333333;
+    color: white;
+    padding: 20px;
+    font-family: 'Sen', sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-media, .kontakt, .nyhedsbrev {
+    flex: 1;
+}
+
+.social-media h4, .kontakt h4, .nyhedsbrev h4 {
+    font-family: 'Teko', sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.social-media a, .kontakt a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-media img, .kontakt img {
+    width: 24px;
+    height: 24px;
+}
+
+.nyhedsbrev {
+    flex: 2;
+}
+
+.nyhedsbrev p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.nyhedsbrev form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.nyhedsbrev input {
+    flex: 1;
+    min-width: 150px;
+    padding: 5px;
+    border: none;
+}
+
+.nyhedsbrev button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .social-media, .kontakt, .nyhedsbrev {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .nyhedsbrev form {
+        justify-content: center;
+    }
+}
