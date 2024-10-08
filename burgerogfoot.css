@@ -17,26 +17,38 @@ body {
 .container {
   max-width: 100%; /* Set a maximum width for the container */
   margin: 1% 1% auto; /* Center the container horizontally */
+  margin-right: 0;
   display: flex; /* Use flexbox to layout the navbar content */
   justify-content: space-between; /* Space out the navbar content evenly */
-  /* align-items: center; /* Vertically center the navbar content */
+  align-items: center; /* Vertically center the navbar content */
+}
+
+.ikoner img, .logo img {
+  width: 75%;
+  height: auto;
+  max-width: 100%; /* Adjust this value as needed */
+  transition: all 0.3s ease;
+}
+
+.logo img {
+  width: 85%;
 }
 
 .burger-icon {
-    width: 30px;
-    height: 30px;
-    background: url('images/burgermenu-ikon.png') no-repeat center center;
+    /* width: 100%;
+    height: auto; */
+    /* background: url('images/burgermenu-ikon.png') no-repeat center center; */
     background-size: contain;
     border: none;
     cursor: pointer;
-    padding: 10px;
+    /*padding: 10px;*/
     transition: transform 0.3s ease;
     /* position: fixed; */
     top: 10px;
     left: 10px;
     z-index: 1001;
-    margin-top: 15px;
-    margin-left: 15px;
+    /* margin-top: 15px;
+    margin-left: 15px; */
 }
 
 .burger-icon.active {
