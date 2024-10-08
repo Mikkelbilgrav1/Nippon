@@ -62,28 +62,26 @@
 
     <div class="indkoeb-overlay" id="indkoeb-overlay">
         <div class="indkoeb-header">
-            <button class="close-btn" id="close-icon">✕</button>
-            <img src="images/indkoebskurv.svg" alt="indkøbskurv">
+            <img src="images/indkoebskurv.svg" alt="indkøbskurv" class="cart-icon">
+            <button class="close-btn" id="close-indkoeb-icon">✕</button>
         </div>
-        <nav class="indkoeb-items">
-            <h2>Ingen varer valgt</h2>
-            <h2>Din indkøbskurv er tom</h2>
+        <div class="indkoeb-content">
+            <h2 class="main-title">Ingen varer valgt</h2>
+            <h3 class="sub-title">Din indkøbskurv er tom</h3>
             
-            <section>
-                <div>
-                    <h2>0 varer</h2>
-                    <h2>Sparet på tilbud</h2>
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>0 varer</span>
+                    <span>0,00 kr.</span>
                 </div>
-                <div>
-                    <h2>0,00 kr.</h2>
-                    <h2>0,00 kr.</h2>
+                <div class="summary-row">
+                    <span>Sparet på tilbud</span>
+                    <span>0,00 kr.</span>
                 </div>
-            </section>
+            </div>
             
-            <button>
-                <h1>Gå til kurv</h1>
-            </button>
-        </nav>
+            <button class="go-to-cart-btn">Gå til kurv</button>
+        </div>
     </div>
 
 <main>

@@ -117,29 +117,30 @@ body {
 }
 
 .menu-items {
-    padding: 20px;
+    padding: 20px 20px 20px 80px; 
     overflow-y: auto;
 }
 
 .menu-items h2 {
-    margin: 20px 0 10px;
+    margin: 20px 0 10px 0;
     font-size: 30px;
     font-family: 'Teko', sans-serif;
 }
 
 .menu-items ul {
     list-style-type: none;
-    padding-left: 20px;
+    padding-left: 0; 
     margin-top: 0;
     margin-bottom: 20px;
+    margin-left: 0; 
 }
 
 .menu-items li {
     margin-bottom: 8px;
     font-size: 20px;
     font-family: 'Sen', sans-serif;
+    padding-left: 10px; 
 }
-
 
 /*Footer section*/
 footer{
@@ -245,39 +246,84 @@ footer{
 }
   
 .indkoeb-overlay {
-  position: fixed;
-  top: 0;
-  left: -100%; 
-  width: 100%;
-  max-width: 400px;
-  height: 100%;
-  background-color: #f9f6f1;
-  display: flex;
-  flex-direction: column;
-  z-index: 1000;
-  border-right: 1px solid #000000;
-  transition: left 0.3s ease; /*transition */
+    position: fixed;
+    top: 0;
+    right: -100%; 
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    background-color: #f9f6f1;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    border-left: 1px solid #000000; 
+    transition: right 0.3s ease; 
+    box-sizing: border-box;
 }
 
 .indkoeb-overlay.active {
-  left: 0; 
+    right: 0; 
 }
 
 .indkoeb-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
 }
 
-
-.indkoeb-items {
-  padding: 20px;
-  overflow-y: auto;
+.cart-icon {
+    width: 24px;
+    height: 24px;
 }
 
-.indkoeb-items h2 {
-  margin: 20px 0 10px;
-  font-size: 30px;
-  font-family: 'Teko', sans-serif;
+.close-btn {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.indkoeb-content {
+    text-align: center;
+}
+
+.main-title {
+    font-family: 'Teko', sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.sub-title {
+    font-family: 'Teko', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.cart-summary {
+    margin-bottom: 30px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Sen', sans-serif;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.go-to-cart-btn {
+    background-color: #f0f0f0;
+    border: 2px solid transparent;
+    padding: 10px 20px;
+    font-family: 'Sen', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+
+.go-to-cart-btn:hover {
+    border-color: #3272B8;
 }

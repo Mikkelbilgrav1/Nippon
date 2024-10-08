@@ -25,12 +25,13 @@
     });
 }); */
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
     const burgerIcon = document.querySelector('.burger-icon');
     const menuOverlay = document.querySelector('.menu-overlay');
     const closeBtn = document.getElementById('close-icon');
-    const indkoebIcon = document.querySelector('.indkoeb-icon');
-    const indkoebOverlay = document.querySelector('.indkoeb-overlay');
+    const indkoebIcon = document.getElementById('indkoeb-icon');
+    const indkoebOverlay = document.getElementById('indkoeb-overlay');
+    const closeIndkoebIcon = document.getElementById('close-indkoeb-icon');
 
     function toggleMenu() {
         menuOverlay.classList.toggle('active');
@@ -55,8 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     burgerIcon.addEventListener('click', toggleMenu);
     closeBtn.addEventListener('click', closeMenu);
     indkoebIcon.addEventListener('click', toggleIndkoeb);
-    closeBtn.addEventListener('click', closeIndkoeb);
-
+    closeIndkoebIcon.addEventListener('click', closeIndkoeb);
 
     // Close menu when clicking outside
     document.addEventListener('click', (event) => {
