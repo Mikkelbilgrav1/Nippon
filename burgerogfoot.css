@@ -303,6 +303,7 @@ footer{
 
 .cart-summary {
     margin-bottom: 30px;
+    padding: 0 20px; /* Add horizontal padding to the cart summary */
 }
 
 .summary-row {
@@ -311,6 +312,16 @@ footer{
     font-family: 'Sen', sans-serif;
     font-size: 16px;
     margin-bottom: 10px;
+    padding-left: 20px; /* Add left padding to move text to the right */
+    padding-right: 20px; /* Add right padding for balance */
+}
+
+.summary-row span:first-child {
+    text-align: left; /* Ensure left alignment for the text */
+}
+
+.summary-row span:last-child {
+    text-align: right; /* Ensure right alignment for the amounts */
 }
 
 .go-to-cart-btn {
