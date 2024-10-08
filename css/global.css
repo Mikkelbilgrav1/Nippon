@@ -32,19 +32,110 @@ body {
   align-items: center; /* Vertically center the navbar content */
 }
 
-.burger-menu {
-  margin-left: 3%;
+.burger-menu, .close-menu {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    z-index: 1013; /* Increase this to be above the menu overlay */
+    display: none; /* Hide by default */
+    background-color: white; /* Add a background to make it stand out */
+    border-radius: 50%; /* Make it circular */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Add a subtle shadow */
 }
 
+.burger-menu span, .close-menu span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #000;
+    border-radius: 3px;
+    left: 0;
+    transition: .25s ease-in-out;
+}
+
+.burger-menu span:nth-child(1) { top: 0; }
+.burger-menu span:nth-child(2) { top: 10px; }
+.burger-menu span:nth-child(3) { top: 20px; }
+
+.close-menu {
+    display: none; /* Hide by default */
+    font-size: 30px; /* Adjust size as needed */
+    line-height: 24px; /* Center the × vertically */
+    text-align: center;
+}
+
+.close-menu span:nth-child(1) {
+    top: 11px;
+    transform: rotate(45deg);
+}
+
+.close-menu span:nth-child(2) {
+    top: 11px;
+    transform: rotate(-45deg);
+}
+
+/* Always show both buttons, but change their appearance */
+body:not(.menu-open) .close-menu span {
+    opacity: 0;
+}
+
+body.menu-open .burger-menu {
+    display: none;
+}
+
+body.menu-open .close-menu {
+    display: block;
+}
+
+/* Hide the original burger menu image */
 .burgerbillede {
-  width: 75%;
-  height: auto;
+  display: none;
+}
+
+/* You can remove or comment out these styles if they're not needed */
+
+#close-menu {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 32px;
+  cursor: pointer;
+  z-index: 1001;
+  margin-right: 15px;
+  color: #000;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .logo {
   /* Add styles for the logo here */
+  display: block; /* Ensure it's visible */
+  position: fixed;
+  top: 20px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1011; /* Above the menu and close button */
 }
 
+.logo img {
+  height: 40px; /* Adjust the size as needed */
+  width: auto;
+}
+
+/* Remove this style if it exists */
+/*
+.burgerbillede {
+  display: none;
+}
+*/
+
+/* Shopping Cart Styling */
 .shopping-cart {
   margin-right: 3%;
 }
@@ -63,32 +154,27 @@ body {
   width: 80%;
   max-width: 400px;
   height: 100%;
-  background-color: white;
-  z-index: 1000;
+  background-color: #f8f8f8; /* Light gray background */
+  z-index: 1012; /* Ensure it's below the close button */
   transition: left 0.3s ease-in-out;
   overflow-y: auto;
-  border: 2px solid #000;
+  border-right: 2px solid #000;
   box-sizing: border-box;
+  padding-top: 20px;
 }
 
 #menu-overlay.active {
   left: 0;
 }
 
-#menu-content {
-  padding: 60px 40px 20px;
-}
-
 #menu-header {
   position: relative;
-  padding: 20px 20px 0;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  padding: 0 20px;
   margin-bottom: 30px;
 }
 
+/* Remove or comment out the #close-menu styles since we're not using a separate close button */
+/*
 #close-menu {
   position: absolute;
   top: 20px;
@@ -97,92 +183,304 @@ body {
   cursor: pointer;
   z-index: 1001;
   margin-right: 15px;
-}
-
-#burger-icon,
-#close-menu {
-  /* position: fixed; */
-  /* top: 20px; */
-  /* left: 20px;
-  width: 24px;
-  height: 24px; */
-  background-size: contain;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  z-index: 1001;
+  color: #000;
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  font-size: 36px;
 }
-
-#burger-icon {
-  background-image: url('images/burgermenu-ikon.png');
-}
-
-#close-menu {
-  background-image: url('images/close-icon.png');
-  opacity: 0;
-  transform: rotate(-90deg) scale(0);
-  pointer-events: none;
-}
+*/
 
 /* Search Bar Styling */
 #search-bar {
-  position: absolute;
-  top: -32px;
-  left: 60px;
-  width: 150px;
+  position: relative;
+  width: calc(100% - 40px);
   display: flex;
   align-items: center;
   border: 1px solid #000000;
   border-radius: 20px;
-  padding: 2px 8px;
+  padding: 8px 15px;
+  background-color: white;
+  margin: 0 auto;
 }
 
 #search-bar input {
   border: none;
   outline: none;
-  width: calc(100% - 20px);
-  font-size: 14px;
+  width: 100%;
+  font-size: 16px;
+  background: transparent;
 }
 
 #search-icon {
-  width: 14px;
-  height: 14px;
-  background-image: url(images/søg-ikon.png);
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/søg-ikon.png);
   background-size: contain;
   background-repeat: no-repeat;
   cursor: pointer;
-  flex-shrink: 0;
-  margin-left: 5px;
 }
 
 /* Navigation Menu Styling */
 nav ul {
   list-style-type: none;
   padding: 0;
-  margin-left: 20px;
+  margin: 0 20px;
 }
 
 nav li {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 nav a {
   text-decoration: none;
   color: black;
   font-family: 'Teko', sans-serif;
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 500;
 }
 
 .submenu {
   display: block;
   font-family: 'Sen', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   color: #666;
   margin-top: 5px;
 }
+
+.close-menu {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1011;
+}
+
+/* ... rest of your existing styles ... */
+
+
+/*Footer section*/
+footer{
+  background-color: #434343;
+  color: #DFCFC2;
+  padding: 20px;
+}
+
+.footer-content{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.social-media h4, .kontakt h4, .nyhedsbrev h4{
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #DFCFC2;
+  text-align: center;
+  font-family: Teko;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.social-media a{
+  margin: 0 10px;
+}
+
+.kontakt{
+  text-align:center;
+}
+
+.nyhedsbrev{
+  text-align: center;
+}
+
+.nyhedsbrev p{
+font-family: "Sen", sans-serif;
+font-optical-sizing: auto;
+font-style: normal;
+}
+
+.nyhedsbrev form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-family: "Sen", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.nyhedsbrev input{
+  padding: 10px;
+  /*border-radius: 5px;*/
+  border: none;
+  font-size: 1em;
+}
+
+.nyhedsbrev button {
+  background-color: #3272B8;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  /*border-radius: 5px;*/
+  font-size: 1em;
+  cursor: pointer;
+  font-family: "Sen", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.nyhedsbrev button:hover {
+  background-color: #7BB1EC;
+}
+
+ /*Burgerogfoot indhold*/
+ 
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+position: fixed; /* Make the navbar fixed at the top */
+top: 2%;
+left: 0%;
+right: 0%;
+width: 100%;
+background-color: transparent; /* Make the navbar transparent */
+z-index: 1000; /* Ensure the navbar is on top of other elements */
+}
+
+.container {
+max-width: 100%; /* Set a maximum width for the container */
+margin: 1% 1% auto; /* Center the container horizontally */
+margin-right: 0;
+display: flex; /* Use flexbox to layout the navbar content */
+justify-content: space-between; /* Space out the navbar content evenly */
+align-items: center; /* Vertically center the navbar content */
+}
+
+.ikoner img, .logo img {
+width: 75%;
+height: auto;
+max-width: 100%; /* Adjust this value as needed */
+transition: all 0.3s ease;
+}
+
+.logo img {
+width: 85%;
+}
+
+.burger-icon {
+  /* width: 100%;
+  height: auto; */
+  /* background: url('images/burgermenu-ikon.png') no-repeat center center; */
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  /*padding: 10px;*/
+  transition: transform 0.3s ease;
+  /* position: fixed; */
+  top: 10px;
+  left: 10px;
+  z-index: 1001;
+  /* margin-top: 15px;
+  margin-left: 15px; */
+}
+
+.burger-icon.active {
+  transform: rotate(90deg);
+  background: url('path/to/your/close-icon.png') no-repeat center center;
+  background-size: contain;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: -100%; 
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  background-color: #f9f6f1;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  border-right: 1px solid #000000;
+  transition: left 0.3s ease; /*transition */
+}
+
+.menu-overlay.active {
+  left: 0; 
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.close-btn {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  padding: 5px 10px;
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+}
+
+.search-btn {
+  width: 20px;
+  height: 20px;
+  background: url('path/to/your/search-icon.png') no-repeat center center;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-items {
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.menu-items h2 {
+  margin: 20px 0 10px;
+  font-size: 30px;
+  font-family: 'Teko', sans-serif;
+}
+
+.menu-items ul {
+  list-style-type: none;
+  padding-left: 20px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.menu-items li {
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-family: 'Sen', sans-serif;
+}
+
 
 /*Footer section*/
 footer{
