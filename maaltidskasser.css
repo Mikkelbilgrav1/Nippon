@@ -45,6 +45,8 @@
 .filter-box ul {
     list-style-type: none;
     padding: 0;
+    margin-right: 5%;
+    margin-left: 5%;
 }
 
 .filter-box li {
