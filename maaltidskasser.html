@@ -6,7 +6,6 @@
     <title>Nippon Menu</title>
     <link rel="stylesheet" href="burgerogfoot.css">
     <link rel="stylesheet" href="maaltidskasser.css">
-    <script src="burgerogfoot.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&family=Sen:wght@400;700&display=swap" rel="stylesheet">
 
@@ -29,6 +28,7 @@
                 <!-- Shopping cart icon -->
                 <a href="#">
                     <img src="images/indkoebskurv.svg" alt="indkøbskurv" class="indkoeb-icon" id="indkoeb-icon">
+                    <span id="cart-count">0</span>
                 </a>
             </div>
         </div>
@@ -87,8 +87,10 @@
 
 <main>
 
-    <div class="hero">
-        <h1>Find din måltidskasse</h1>
+    <div class="hero" id="hero">
+        <div class="hero-content">
+            <h1>Find din måltidskasse</h1>
+        </div>
     </div>
 
 <div class="filter-grid-info">
@@ -115,43 +117,74 @@
             <img src="images/sushitest.png" alt="Sushi">
             <div class="menu-item-content">
                 <h3>Sushi</h3>
-                <p class="description">Dette er en klassisk japansk ret bestående af frisk rå fisk eller skaldyr, serveret med små risbolle krydret</p>
+                <p class="description">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <button class="vaelg-btn">Vælg</button>
             </div>
         </div>
         <div class="menu-item">
-            <p>Ramen</p>
             <img src="ramen.jpg" alt="Ramen">
+            <div class="menu-item-content">
+                <h3>Ramen</h3>
+                <p class="description">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <button class="vaelg-btn">Vælg</button>
+            </div>
         </div>
         <div class="menu-item">
-            <p>Tempura</p>
             <img src="tempura.jpg" alt="Tempura">
+            <div class="menu-item-content">
+                <h3>Tempura</h3>
+                <p class="description">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <button class="vaelg-btn">Vælg</button>
+            </div>
         </div>
         <div class="menu-item">
-            <p>Sushi</p>
-            <img src="sushi.jpg" alt="Sushi">
+            <img src="udon.jpg" alt="Udon">
+            <div class="menu-item-content">
+                <h3>Udon</h3>
+                <p class="description">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <button class="vaelg-btn">Vælg</button>
+            </div>
         </div>
         <div class="menu-item">
-            <p>Ramen</p>
-            <img src="ramen.jpg" alt="Ramen">
+            <img src="yakitori.jpg" alt="Yakitori">
+            <div class="menu-item-content">
+                <h3>Yakitori</h3>
+                <p class="description">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <button class="vaelg-btn">Vælg</button>
+            </div>
         </div>
         <div class="menu-item">
-            <p>Tempura</p>
-            <img src="tempura.jpg" alt="Tempura">
+            <img src="miso.jpg" alt="Miso Suppe">
+            <div class="menu-item-content">
+                <h3>Miso Suppe</h3>
+                <p class="description">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <button class="vaelg-btn">Vælg</button>
+            </div>
         </div>
         <div class="menu-item">
-            <p>Sushi</p>
-            <img src="sushi.jpg" alt="Sushi">
+            <img src="gyoza.jpg" alt="Gyoza">
+            <div class="menu-item-content">
+                <h3>Gyoza</h3>
+                <p class="description">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p>
+                <button class="vaelg-btn">Vælg</button>
+            </div>
         </div>
         <div class="menu-item">
-            <p>Ramen</p>
-            <img src="ramen.jpg" alt="Ramen">
+            <img src="tonkatsu.jpg" alt="Tonkatsu">
+            <div class="menu-item-content">
+                <h3>Tonkatsu</h3>
+                <p class="description">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <button class="vaelg-btn">Vælg</button>
+            </div>
         </div>
         <div class="menu-item">
-            <p>Tempura</p>
-            <img src="tempura.jpg" alt="Tempura">
+            <img src="okonomiyaki.jpg" alt="Okonomiyaki">
+            <div class="menu-item-content">
+                <h3>Okonomiyaki</h3>
+                <p class="description">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <button class="vaelg-btn">Vælg</button>
+            </div>
         </div>
-        <!-- Add more menu items as needed -->
     </div>
     </div>
 
@@ -195,6 +228,7 @@
         </div>
     </footer>
 
-
+    <script src="burgerogfoot.js"></script>
+    <script src="javascript/maaltidskasser.js"></script>
 </body>
 </html>

@@ -1,16 +1,29 @@
 .hero {
     position: relative;
     height: 75vh;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-image: url('images/heromaaltidskasse.jpg');
     background-size: cover;
     background-position: center;
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+.hero-content {
+    position: relative;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.hero img {
-    height: 100px;
 }
 
 .hero h1 {
@@ -64,10 +77,9 @@
 /*Alt bokse relateret til menuen*/
 .menu {
     display: grid;
-    grid-template-columns: repeat(3, minmax(200px, 1fr)); /* Adjust minmax as needed */
-    gap: 20px; /* Reduced gap slightly */
-    flex-grow: 1;
-    padding: 1%;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 300px; /* Mellemrum mellem bokse */
+    padding: 20px;
 }
 
 .menu-item {
@@ -75,15 +87,24 @@
     text-align: center;
     position: relative;
     overflow: hidden;
-    aspect-ratio: 1 / 1.1; 
-    max-width: 300px; 
-    margin: 0 auto; 
+    aspect-ratio: 1 / 1; /* aspect ratioen for boksen */
+    width: 100%;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform-style: preserve-3d;
+    transition: transform 0.1s;
 }
 
 .menu-item img {
     width: 100%;
-    height: 100%; 
+    height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover img {
+    transform: scale(1.1);
 }
 
 .menu-item-content {
@@ -99,6 +120,7 @@
     background-color: rgba(255, 255, 255, 0.9);
     opacity: 0;
     transition: opacity 0.3s ease;
+    transform: translateZ(20px);
 }
 
 .menu-item:hover .menu-item-content {
@@ -108,13 +130,19 @@
 .menu-item h3 {
     margin: 10px 0;
     font-family: 'Teko', sans-serif;
-    font-size: 22px; 
+    font-size: 22px;
 }
 
+/* Remove the description for a cleaner look, similar to the image */
 .menu-item .description {
     font-family: 'Sen', sans-serif;
     font-size: 14px;
     color: #333;
+    /* Ensure text doesn't overflow */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
 .vaelg-btn {
@@ -127,6 +155,22 @@
     cursor: pointer;
     align-self: center;
     width: 100%;
+    margin-top: auto;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .menu {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+        gap: 20px; /* Slightly reduced gap for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        grid-template-columns: 1fr; /* 1 column on very small screens */
+        gap: 15px; /* Further reduced gap for very small screens */
+    }
 }
 
 .filter-grid-info {
@@ -146,4 +190,25 @@ footer {
     color: white;
     padding: 20px;
     text-align: center;
+}
+
+.menu-item.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#cart-count {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    display: none;
+}
+
+.ikoner {
+    position: relative;
 }
