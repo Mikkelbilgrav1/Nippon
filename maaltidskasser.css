@@ -22,13 +22,15 @@
 .content-wrapper {
     display: flex;
     position: relative;
+    padding: 20px;
 }
 
 .filter-box {
     width: 200px;
-    background-color: #f5f5f5;
-    /* padding: 20px; */
-    margin: 1% 0% 1% 1%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    margin-right: 20px;
     position: sticky;
     top: 25%;
     align-self: flex-start;
@@ -37,7 +39,7 @@
 }
 
 .filter-box h2 {
-    margin-top: 10%;
+    margin-top: 0;
     display: flex;
     justify-content: center;
 }
@@ -55,35 +57,76 @@
 
 .filter {
     display: flex;
-    flex-direction: row-reverse;
     justify-content: space-between;
+    align-items: center;
 }
 
+/*Alt bokse relateret til menuen*/
 .menu {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr)); /* Adjust minmax as needed */
+    gap: 20px; /* Reduced gap slightly */
     flex-grow: 1;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 1%;
-}
-
-.menu {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
     padding: 1%;
 }
 
 .menu-item {
     background-color: #f5f5f5;
-    padding: 10px;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1 / 1.1; 
+    max-width: 300px; 
+    margin: 0 auto; 
 }
 
 .menu-item img {
     width: 100%;
-    height: 100px;
+    height: 100%; 
     object-fit: cover;
+}
+
+.menu-item-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.menu-item:hover .menu-item-content {
+    opacity: 1;
+}
+
+.menu-item h3 {
+    margin: 10px 0;
+    font-family: 'Teko', sans-serif;
+    font-size: 22px; 
+}
+
+.menu-item .description {
+    font-family: 'Sen', sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+.vaelg-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    font-family: 'Teko', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    align-self: center;
+    width: 100%;
 }
 
 .filter-grid-info {
