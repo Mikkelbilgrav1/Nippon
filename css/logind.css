@@ -6,6 +6,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 main {
@@ -17,6 +18,28 @@ main {
     padding: 2rem;
 }
 
+/* Navbar styles */
+.navbar {
+    padding: 1rem;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-ikon {
+    max-width: 150px;
+    height: auto;
+}
+
+.burger-icon, .indkoeb-icon {
+    width: 30px;
+    height: auto;
+}
+
+/* Login container styles */
 .login-container {
     display: flex;
     justify-content: center;
@@ -25,8 +48,8 @@ main {
     width: 100%;
     max-width: 800px;
     z-index: 1;
-    margin: 200px auto 80px; /
-    padding: 0 100px;
+    margin: 180px auto 40px;
+    padding: 0 20px;
     position: relative;
 }
 
@@ -34,12 +57,12 @@ main {
     background-color: #fff;
     padding: 2rem;
     border: 1px solid #000;
-    width: 300px;
-    font-family: 'Teko', sans-serif; 
+    width: 100%;
+    max-width: 300px;
+    font-family: 'Teko', sans-serif;
 }
 
 .form-container h2 {
-    font-family: 'Teko', sans-serif;
     font-size: 2rem;
     margin-bottom: 1.5rem;
 }
@@ -49,8 +72,7 @@ main {
 }
 
 .form-group label {
-    font-family: 'Teko', sans-serif;
-    font-size: 1.2rem; 
+    font-size: 1.2rem;
     display: flex;
     align-items: center;
     margin-bottom: 0.5rem;
@@ -67,7 +89,7 @@ input[type="email"],
 input[type="tel"],
 input[type="password"] {
     font-family: 'Teko', sans-serif;
-    font-size: 1rem; 
+    font-size: 1rem;
     width: 100%;
     padding: 0.5rem;
     border: 1px solid #ccc;
@@ -76,7 +98,7 @@ input[type="password"] {
 
 .submit-btn {
     font-family: 'Teko', sans-serif;
-    font-size: 1.2rem; /* størrelse */
+    font-size: 1.2rem;
     background-color: #f0f0f0;
     color: #000;
     border: none;
@@ -88,35 +110,39 @@ input[type="password"] {
     margin-top: 1rem;
 }
 
+/* Separator styles */
 .separator {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin: 0 2rem;
+    margin: 2rem 0;
     position: relative;
 }
 
 .separator span {
     font-family: 'Teko', sans-serif;
-    padding: 10rem 0;
+    padding: 1rem 2rem;
     font-size: 2.5rem;
     font-weight: bold;
+    background-color: #f9f6f1; /* Match the body background color */
+    position: relative;
+    z-index: 1;
 }
 
 .separator::before {
     content: '';
     position: absolute;
-    top: -50px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 40px;
-    background-size: contain;
-    background-repeat: no-repeat;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #000; /* Color of the line */
+    z-index: 0;
 }
 
+/* Decorative images styles */
 .decorative-images {
     position: absolute;
     width: 100%;
@@ -129,53 +155,72 @@ input[type="password"] {
 
 .decorative-image {
     position: absolute;
+    max-width: 250px;
+    width: 20%;
+    height: auto;
 }
 
 .noodles {
-    top: 30%;
-    left: 14.5%;
-    width: 350px;
+    top: 35%;
+    left: 18.7%;
 }
 
 .rice-bowl {
-    top: 3.6%;
-    right: 29.5%;
-    width: 250px;
+    top: 2%;
+    right: 29%;
 }
 
 .sushi {
-    bottom: -1.5%;
+    bottom: -3%;
     left: 29.5%;
-    width: 250px;
 }
 
 .sushi-stack {
-    bottom: 10%;
-    right: 5%;
-    width: 120px;
+    bottom: 17%;
+    right: 45%;
 }
 
 .soup-bowl {
-    top: 73.4%;
-    left: 83%;
+    top: 76.7%;
+    left: 80%;
     transform: translate(-50%, -50%);
-    width: 300px;
 }
 
-
-.chopsticks {
-    top: 40%;
-    left: 2%;
-    width: 80px;
-    transform: rotate(-45deg);
+.sushi-stack.big-sushi.enlarged-sushi {
+    width: 270px !important;
+    height: auto !important;
+    position: absolute !important;
+    bottom: 19% !important;
+    right: 42.7% !important;
+    z-index: 10 !important;
+    max-width: none !important;
+    display: block !important;
 }
 
-.sushi-stack {
-    bottom: 19%;
-    right: 43%;
-    width: 270px;
+@media screen and (max-width: 1024px) {
+    .decorative-images {
+        display: none;
+    }
+
+    .sushi-stack.big-sushi.enlarged-sushi {
+        display: none !important;
+    }
 }
 
+@media screen and (min-width: 1025px) {
+    .enlarged-sushi {
+        display: block !important;
+    }
+}
+
+/* Media query to hide images on smaller screens */
+@media screen and (max-width: 1024px) {
+    .decorative-images {
+        display: none;
+    }
+}
+
+/* Footer styles */
 footer {
     background-color: #333333;
     color: white;
@@ -240,8 +285,67 @@ footer {
     cursor: pointer;
 }
 
-Responsive adjustments
-@media (max-width: 768px) {
+.big-sushi {
+    width: 900px !important; /* A more moderate increase */
+    height: auto !important;
+    position: absolute !important;
+    bottom: 17% !important;
+    right: 43.5% !important;
+    z-index: 10 !important;
+}
+
+/* Add these responsive styles at the end of your CSS file */
+
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
+    body {
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .login-container {
+        flex-direction: column;
+        gap: 2rem;
+        margin: 80px auto 40px;
+        padding: 0 15px;
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .form-container {
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .separator {
+        margin: 1rem 0;
+    }
+
+    .decorative-images {
+        display: none; /* Hide decorative images on smaller screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .login-container {
+        margin: 60px auto 30px;
+    }
+
+    .separator {
+        margin: 2rem 0;
+        width: 100%;
+    }
+
+    .separator span {
+        font-size: 2rem;
+        padding: 0.5rem 1rem;
+    }
+
     .footer-content {
         flex-direction: column;
         align-items: center;
@@ -256,4 +360,146 @@ Responsive adjustments
     .nyhedsbrev form {
         justify-content: center;
     }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar .container {
+        padding: 0 0.5rem;
+    }
+
+    .logo-ikon {
+        max-width: 100px;
+    }
+
+    .login-container {
+        margin: 40px auto 20px;
+    }
+
+    .form-container {
+        padding: 1rem;
+    }
+
+    .form-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-group label {
+        font-size: 1rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"] {
+        font-size: 0.9rem;
+    }
+
+    .submit-btn {
+        font-size: 1rem;
+    }
+
+    .separator span {
+        font-size: 2rem;
+        padding: 1rem 0;
+    }
+
+    .social-media h4, .kontakt h4, .nyhedsbrev h4 {
+        font-size: 20px;
+    }
+
+    .nyhedsbrev p {
+        font-size: 12px;
+    }
+
+    .nyhedsbrev input, .nyhedsbrev button {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .form-container {
+        padding: 0.8rem;
+    }
+
+    .form-container h2 {
+        font-size: 1.3rem;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"] {
+        font-size: 0.85rem;
+    }
+
+    .submit-btn {
+        font-size: 0.95rem;
+    }
+
+    .separator span {
+        font-size: 1.8rem;
+    }
+}
+
+.enlarged-sushi {
+    width: 1000px !important;
+    height: auto !important;
+    position: absolute !important;
+    bottom: 17% !important;
+    right: 43.5% !important;
+    z-index: 10 !important;
+    max-width: none !important;
+}
+
+
+@media screen and (min-width: 1025px) {
+    .enlarged-sushi {
+        display: block !important;
+    }
+}
+
+.sushi-stack.big-sushi.enlarged-sushi {
+    width: 270px !important;
+    height: auto !important;
+    position: absolute !important;
+    bottom: 19% !important;
+    right: 42.7% !important;
+    z-index: 10 !important;
+    max-width: none !important;
+    display: block !important;
+}
+
+@media screen and (max-width: 1024px) {
+    .sushi-stack.big-sushi.enlarged-sushi {
+        display: none !important;
+    }
+}
+
+.sushi.big-sushi.enlarged-sushi {
+    width: 600px !important; /* Adjust this value as needed */
+    height: auto !important;
+    position: absolute !important;
+    bottom: 5% !important; /* Adjust these positioning values as needed */
+    left: 5% !important;
+    z-index: 10 !important;
+    max-width: none !important;
+    display: block !important;
+}
+
+@media screen and (max-width: 1024px) {
+    .sushi.big-sushi.enlarged-sushi {
+        display: none !important;
+    }
+}
+
+:root {
+    --noodles-size: 250px;
+    --rice-bowl-size: 250px;
+    --sushi-size: 250px;
+    --sushi-stack-size: 250px;
+    --soup-bowl-size: 250px;
 }
