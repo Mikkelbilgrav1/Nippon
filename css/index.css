@@ -49,7 +49,7 @@ body {
 
 /* Styling af h2*/
 h2{
-    margin-top: 50px;
+    margin-top: 150px;
     font-family: "Teko", sans-serif;
     font-weight: 700;
     font-size: 70px;
@@ -110,11 +110,11 @@ h2{
 }
 
 .carousel-control.prev {
-    left: 10px;
+    left: 80px;
 }
 
 .carousel-control.next {
-    right: 10px;
+    right: 80px;
 }
 
 .carousel-control img {
@@ -142,7 +142,7 @@ h2{
     color: #000000;
 }
 
-/* Overlay-styling */
+/* Overlay-styling i hover under favoritter*/
 .overlay {
     position: absolute;
     top: 0;
@@ -159,7 +159,6 @@ h2{
     transition: opacity 0.3s ease;
 }
 
-/* Når man hover over billedet eller h3, viser vi overlayet */
 .image-wrapper:hover .overlay {
     opacity: 1;
 }
@@ -172,19 +171,219 @@ h2{
     color: rgba(249, 246, 241, 1);
 }
 
-/* Styling af det lille billede */
-.overlay img {
-    width: 100%;
+/* Styling af det lille billede i hover under favoritter*/
+.overlay a {
+    width: 80%;
     height: 80%;
-    margin-bottom: 10px;
 }
 
-/* Styling af den lille tekst under billedet */
+/* Styling af den lille tekst under billedet i hover under favoritter*/
 .overlay p {
     font-size: 16px;
     text-align: center;
     font-family: "Sen", sans-serif;
     margin-left: 20px;
-    margin-right: 10px;
+    margin-right: 20px;
     color: rgba(249, 246, 241, 1);
+}
+
+/* Styling af brugeranmendelser */
+.brugeranmendelser {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.carousel-items2 {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Tilføj afstand mellem billederne */
+    overflow: hidden; /* Skjul overskydende indhold */
+}
+
+.carousel-item2 {
+    position: relative;
+    width: 300px; /* Billedets bredde */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrerer indholdet horisontalt */
+    text-align: center;
+}
+
+.image-wrapper {
+    width: 100%;
+    overflow: hidden; /* Skjul eventuelle overskydende dele af billedet */
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block; /* Sørg for, at billedet opfører sig korrekt i en flex-container */
+    margin-bottom: 10px; /* Afstand mellem billedet og teksten */
+}
+
+.fly-in-text {
+    position: relative;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease;
+    text-align: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.fly-in-text p {
+    font-family: "Sen", sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    color: #000;
+    padding: 10px;
+    margin: 0;
+}
+
+/* Hover-effekt for at vise teksten under billedet */
+.carousel-item2:hover .fly-in-text {
+    max-height: 150px; /* Juster denne værdi afhængig af tekstens højde */
+    transition: max-height 0.5s ease;
+}
+
+/* Styling for knapperne til at skifte mellem billeder */
+.carousel-control2 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.pil-venstre2 {
+    left: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.pil-hoejre2 {
+    right: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.carousel-items2 img {
+    width: 300px;
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+.nyheder{
+    margin-top: 800px;
+}
+
+.baggrundsbillede{
+    margin-bottom: 100px;
+}
+
+/* Styling af baggrundsbillede med pile */
+.baggrundsbillede {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 400px; /* Juster bredden alt efter billedets størrelse */
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+/* Styling til det enkelte billede */
+.baggrundsbillede-billedet {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrerer indholdet horisontalt */
+}
+
+.image-wrapper3 {
+    width: 100%;
+    overflow: hidden; /* Skjuler eventuelle overskydende dele af billedet */
+}
+
+.image-wrapper3 img {
+    width: 1000px;
+    height: auto;
+    display: block; /* Sørger for, at billedet opfører sig korrekt i en flex-container */
+}
+
+/* Styling af pilen venstre */
+.pil-venstre3 {
+    background: none;
+    border: none;
+    z-index: 10;
+    font-size: 30px; /* Størrelse på pile */
+    cursor: pointer;
+    color: #000; /* Farve på pile */
+    padding: 0 10px; /* Plads omkring pile */
+    margin-right: 10px; /* Plads mellem venstre pil og billedet */
+}
+
+.pil-hoejre3 {
+    background: none;
+    border: none;
+    z-index: 10;
+    font-size: 30px; /* Størrelse på pile */
+    cursor: pointer;
+    color: #000; /* Farve på pile */
+    padding: 0 10px; /* Plads omkring pile */
+    margin-right: 10px; /* Plads mellem venstre pil og billedet */
+    margin-left: 10px; /* Plads mellem billedet og højre pil */
+}
+
+/* Styling til teksten oven på billedet */
+.nyhed {
+    position: absolute; 
+    top: 170px; /* Juster afstanden fra toppen af billedet */
+    left: 50%; /* Centerer teksten horisontalt */
+    transform: translateX(-50%); /* Flytter teksten til venstre med halvdelen af sin bredde for centrering */
+    color: white; /* Tekstfarve */
+    padding: 10px; /* Indvendig afstand */
+    font-family: "Sen", sans-serif;
+    text-align: center;
+    font-size: 28px;
+}
+
+/* Styling af knap 2*/
+.knap-container {
+    text-align: center; /* Centrering af inline og inline-block elementer */
+    margin-top: 100px; /* Juster marginen som ønsket */
+    margin-bottom: 100px;
+}
+
+.knap2 {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: rgba(50, 114, 184, 1);
+    color: white;
+    text-decoration: none;
+    font-family: "Sen", sans-serif;
+    font-size: 16px;
+    transition: background-color 0.3s ease; 
+}
+
+/* Ændring af knapfarve ved hover */
+.knap2:hover {
+    background-color: rgba(123, 177, 236, 1);
 }
