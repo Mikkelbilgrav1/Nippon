@@ -22,9 +22,24 @@ body {
     text-align: center;
     color: black;
     flex-shrink: 0;
+    overflow: hidden; /* Sikrer, at overlay fylder hele sektionen */
+}
+
+/* Overlay til at give 70% opacity på baggrundsbilledet */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(232, 232, 232, 0.3); /* 30% mørkt overlay, så baggrundsbilledet er 70% synligt */
+    z-index: 1; /* Sørg for, at overlayet er over baggrundsbilledet */
 }
 
 .hero-content {
+    position: relative; /* Sørg for, at indholdet vises over overlayet */
+    z-index: 2; /* Sørg for, at indholdet er over overlayet */
     /*background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
     padding: 20px;
     border-radius: 10px;
