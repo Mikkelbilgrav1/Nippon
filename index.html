@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nippon Menu</title>
     <link rel="stylesheet" href="burgerogfoot.css">
+    <link rel="stylesheet" href="css/index.css">
     <script src="burgerogfoot.js"></script>
-    <script src="index.js"></script>
+    <script src="/javascript/index.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&family=Sen:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
@@ -28,7 +29,7 @@
             <div class="ikoner">
                 <!-- Shopping cart icon -->
                 <a href="#">
-                    <img src="images/indkoebskurv.svg" alt="indkøbskurv" class="ikon-ikon">
+                    <img src="images/indkoebskurv.svg" alt="indkøbskurv" class="indkoeb-icon" id="indkoeb-icon">
                 </a>
             </div>
         </div>
@@ -59,6 +60,30 @@
             </ul>
             <h2>Log Ind</h2>
         </nav>
+    </div>
+
+    <div class="indkoeb-overlay" id="indkoeb-overlay">
+        <div class="indkoeb-header">
+            <img src="images/indkoebskurv.svg" alt="indkøbskurv" class="cart-icon">
+            <button class="close-btn" id="close-indkoeb-icon">✕</button>
+        </div>
+        <div class="indkoeb-content">
+            <h2 class="main-title">Ingen varer valgt</h2>
+            <h3 class="sub-title">Din indkøbskurv er tom</h3>
+            
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>0 varer</span>
+                    <span>0,00 kr.</span>
+                </div>
+                <div class="summary-row">
+                    <span>Sparet på tilbud</span>
+                    <span>0,00 kr.</span>
+                </div>
+            </div>
+            
+            <button class="go-to-cart-btn">Gå til kurv</button>
+        </div>
     </div>
 
 <main>
