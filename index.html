@@ -6,12 +6,15 @@
     <title>Nippon Menu</title>
     <link rel="stylesheet" href="burgerogfoot.css">
     <link rel="stylesheet" href="css/index.css">
-    <script src="burgerogfoot.js"></script>
-    <script src="/javascript/index.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&family=Sen:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/index.css">
 </head>
+<body>
+    <script src="burgerogfoot.js"></script>
+    <script src="/javascript/index.js"></script>
+</body>
+</html>
+
 
 <body>
     <nav class="navbar">
@@ -90,6 +93,7 @@
     <div class="video-container">
         <video autoplay loop muted class="video">
             <source src="video/en-laver-mad.mp4" type="video/mp4">
+            Din browser understøtter ikke videoformatet.
         </video>
         <div class="tekst-på-videoen">
             Prøv et af vores japanske måltidskasser<br>
@@ -98,22 +102,59 @@
             <a href="/maaltidskasser.html" class="knap1">Bestil dine måltidskasser</a>
         </div>
     </div>
-
+    
     <div class="favoritter">
-        <h2>Favoritter hos vores kunder</h2>
-        <div class="carousel">
-            <div class="carousel-item">
-                <img src="/api/placeholder/150/100" alt="Retter">
+        <h2 id="next-section">Favoritter hos vores kunder</h2>
+        <div class="carousel-wrapper">
+            <!-- Venstre pil -->
+            <button class="carousel-control prev">
+                <img src="/images/forside/pil-til-venstre.png" alt="Pil til venstre">
+            </button>
+            <!-- Billeder i carouselen -->
+            <div class="carousel1">
+                <div class="carousel-item1">
+                    <div class="image-wrapper">
+                        <h3>Ramen</h3>
+                        <img src="/images/forside/ramen.png" alt="Ramen">
+                        <div class="overlay">
+                            <h3>Ramen</h3>
+                            <a href="/maaltidskasser.html">
+                                <img src="/images/forside/ramen.png" alt="Ramen">
+                            </a>
+                            <p>Nudelsuppe med en smagfuld bouillon, som kan være baseret på soja, miso, eller salt.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item1">
+                    <div class="image-wrapper">
+                        <h3>Tempura</h3>
+                        <img src="/images/forside/tempura.png" alt="Tempura">
+                        <div class="overlay">
+                            <h3>Tempura</h3>
+                            <img src="/images/forside/tempura.png" alt="Tempura">
+                            <p>Tempura er dybstegte grøntsager, fisk eller skaldyr, paneret i en let dej.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item1">
+                    <div class="image-wrapper">
+                        <h3>Agedashi Tofu</h3>
+                        <img src="/images/forside/agedashi-tofu.png" alt="Agedashi Tofu">
+                        <div class="overlay">
+                            <h3>Agedashi Tofu</h3>
+                            <img src="/images/forside/agedashi-tofu.png" alt="Agedashi Tofu">
+                            <p>Dybstegt tofu serveret i en let dashi-bouillon med sojasauce, toppet med forårsløg og revet radise.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="carousel-item">
-                <img src="/api/placeholder/150/100" alt="Salater">
-            </div>
-            <div class="carousel-item">
-                <img src="/api/placeholder/150/100" alt="Morgenmad">
-            </div>
+            <!-- Højre pil -->
+            <button class="carousel-control next">
+                <img src="/images/forside/pil-til-hoejre.png" alt="Pil til højre">
+            </button>
         </div>
     </div>
-
+    
 </main>
 </body>
 <footer>
