@@ -25,7 +25,7 @@ main {
     width: 100%;
     max-width: 800px;
     z-index: 1;
-    margin: 200px auto 80px; /* Increased top margin to 180px */
+    margin: 200px auto 80px; /
     padding: 0 100px;
     position: relative;
 }
@@ -35,7 +35,7 @@ main {
     padding: 2rem;
     border: 1px solid #000;
     width: 300px;
-    font-family: 'Teko', sans-serif; /* Add this line */
+    font-family: 'Teko', sans-serif; 
 }
 
 .form-container h2 {
@@ -50,7 +50,7 @@ main {
 
 .form-group label {
     font-family: 'Teko', sans-serif;
-    font-size: 1.2rem; /* Adjust size as needed */
+    font-size: 1.2rem; 
     display: flex;
     align-items: center;
     margin-bottom: 0.5rem;
@@ -67,7 +67,7 @@ input[type="email"],
 input[type="tel"],
 input[type="password"] {
     font-family: 'Teko', sans-serif;
-    font-size: 1rem; /* Adjust size as needed */
+    font-size: 1rem; 
     width: 100%;
     padding: 0.5rem;
     border: 1px solid #ccc;
@@ -76,7 +76,7 @@ input[type="password"] {
 
 .submit-btn {
     font-family: 'Teko', sans-serif;
-    font-size: 1.2rem; /* Adjust size as needed */
+    font-size: 1.2rem; /* størrelse */
     background-color: #f0f0f0;
     color: #000;
     border: none;
@@ -162,7 +162,7 @@ input[type="password"] {
     width: 300px;
 }
 
-/* Add new decorative elements */
+
 .chopsticks {
     top: 40%;
     left: 2%;
@@ -240,7 +240,7 @@ footer {
     cursor: pointer;
 }
 
-/* Responsive adjustments */
+Responsive adjustments
 @media (max-width: 768px) {
     .footer-content {
         flex-direction: column;
