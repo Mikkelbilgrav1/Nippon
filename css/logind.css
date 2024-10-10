@@ -220,69 +220,133 @@ input[type="password"] {
     }
 }
 
-/* Footer styles */
+/*Footer section*/
 footer {
     background-color: #333333;
     color: white;
-    padding: 20px;
+    padding: 30px 50px;
     font-family: 'Sen', sans-serif;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
-    max-width: 1200px;
+    align-items: flex-start;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
-.social-media, .kontakt, .nyhedsbrev {
+.social-media {
     flex: 1;
 }
 
-.social-media h4, .kontakt h4, .nyhedsbrev h4 {
+.social-icons {
+    margin-bottom: 20px;
+}
+
+.inspire-text {
     font-family: 'Teko', sans-serif;
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 42px; /* Adjust this value as needed */
+    margin-bottom: 15px;
+    font-weight: normal;
+    margin-left: -160px; /* Adjust this value to move it more or less to the left */0
 }
 
-.social-media a, .kontakt a {
-    display: inline-block;
-    margin-right: 10px;
+.icon-container {
+    display: flex;
+    gap: 15px;
 }
 
-.social-media img, .kontakt img {
-    width: 24px;
-    height: 24px;
+.icon-container a img {
+    width: 40px;
+    height: 40px;
+}
+
+.kontakt {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.kontakt img {
+    width: 40px;
+    height: 40px;
+    margin-right: 50px;
+}
+
+.kontakt span {
+    font-size: 28px;
 }
 
 .nyhedsbrev {
     flex: 2;
 }
 
+.nyhedsbrev h4 {
+    font-family: 'Teko', sans-serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
 .nyhedsbrev p {
-    font-size: 14px;
-    margin-bottom: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    max-width: 80%;
 }
 
 .nyhedsbrev form {
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    flex-direction: column;
+    align-items: center; /* This centers the child elements horizontally */
+    gap: 15px;
+}
+
+.input-container {
+    display: flex;
+    gap: 15px;
+    width: 100%; /* Ensure the input container takes full width */
 }
 
 .nyhedsbrev input {
     flex: 1;
-    min-width: 150px;
-    padding: 5px;
+    padding: 12px;
     border: none;
+    font-family: 'Sen', sans-serif;
+    font-size: 16px;
 }
 
 .nyhedsbrev button {
-    padding: 5px 10px;
+    padding: 12px 25px;
     background-color: #007bff;
     color: white;
     border: none;
     cursor: pointer;
+    font-family: 'Sen', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    width: 250px; /* Adjust this value to make the button longer or shorter */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .social-media, .kontakt, .nyhedsbrev {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .nyhedsbrev form {
+        flex-direction: column;
+    }
+
+    .nyhedsbrev input, .nyhedsbrev button {
+        width: 100%;
+    }
 }
 
 .big-sushi {
@@ -502,4 +566,29 @@ footer {
     --sushi-size: 250px;
     --sushi-stack-size: 250px;
     --soup-bowl-size: 250px;
+}
+
+/* Add these styles at the end of your logind.css file */
+
+.menu-items a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu-items a:hover {
+    text-decoration: underline;
+}
+
+.menu-items h2, .menu-items li {
+    cursor: pointer;
+}
+
+/* If you want to change the color of the menu text */
+.menu-items {
+    color: #333; /* Change this to whatever color you prefer */
+}
+
+.social-media h4 {
+    font-size: 42px; /* Adjust this value as needed */
+    margin-bottom: 20px;
 }

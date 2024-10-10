@@ -21,7 +21,7 @@
             <div class="logo">
                 <!-- Logo image -->
                 <a href="#">
-                    <img src="images/logo.svg" alt="logo" class="logo-ikon">
+                    <a href="index.html"><img src="images/logo.svg" alt="logo" class="logo-ikon"></a>
                 </a>
             </div>
             <div class="ikoner">
@@ -94,34 +94,39 @@
             <img src="images/madillustration.png" alt="Soup Bowl" class="decorative-image soup-bowl">
         </div>
     </main>
-
     <footer>
         <div class="footer-content">
             <div class="social-media">
-                <h4>Lad dig inspirere</h4>
-                <a href="#"><img src="images/tiktok-icon.png" alt="TikTok"></a>
-                <a href="#"><img src="images/youtube-icon.png" alt="YouTube"></a>
-                <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
-                <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
-            </div>
-
-            <div class="kontakt">
-                <h4>Kontakt os</h4>
-                <a href="#"><img src="images/telefon-icon copy.png" alt="Telefon"></a>
+                <div class="social-icons">
+                    <h4 class="inspire-text">Lad dig inspirere</h4>
+                    <div class="icon-container">
+                        <a href="#"><img src="images/tiktok-icon.png" alt="TikTok"></a>
+                        <a href="#"><img src="images/youtube-icon.png" alt="YouTube"></a>
+                        <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
+                        <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
+                    </div>
+                </div>
+                <div class="kontakt">
+                    <img src="images/telefon-icon.png" alt="Telefon">
+                    <span>Kontakt os</span>
+                </div>
             </div>
 
             <div class="nyhedsbrev">
                 <h4>Spar 10% på din bestilling</h4>
                 <p>Når du tilmelder dig NIPPON's nyhedsbrev, får du en 10% rabatkode i velkomstgave til brug ved dit næste køb</p>
                 <form>
-                    <input type="text" placeholder="Dit navn">
-                    <input type="email" placeholder="Dit email">
+                    <div class="input-container">
+                        <input type="text" placeholder="Dit navn">
+                        <input type="email" placeholder="Din email">
+                    </div>
                     <button type="submit">Spar 10%</button>
                 </form>
             </div>
         </div>
     </footer>
     <script src="burgerogfoot.js"></script>
+    <script src="menu-navigation.js"></script>
     <div class="menu-overlay" id="menu-overlay">
         <div class="menu-header">
             <button class="close-btn" id="close-icon">✕</button>
@@ -131,21 +136,21 @@
             </div>
         </div>
         <nav class="menu-items">
-            <h2>Forside</h2>
-            <h2>Måltidskasser</h2>
+            <a href="index.html"><h2>Forside</h2></a>
+            <a href="maaltidskasser.html"><h2>Måltidskasser</h2></a>
             <ul>
-                <li>Opskrifter</li>
-                <li>Sådan fungerer det</li>
+                <li><a href="opskrifter.html">Opskrifter</a></li>
+                <li><a href="saadan-fungerer-det.html">Sådan fungerer det</a></li>
             </ul>
-            <h2>Abonnementer</h2>
+            <a href="abonnementer.html"><h2>Abonnementer</h2></a>
             <ul>
-                <li>Studierabat</li>
+                <li><a href="studierabat.html">Studierabat</a></li>
             </ul>
             <h2>Om Nippon</h2>
             <ul>
-                <li>Kontakt</li>
+                <li><a href="kontakt.html">Kontakt</a></li>
             </ul>
-            <h2>Log Ind</h2>
+            <a href="logind.html"><h2>Log Ind</h2></a>
         </nav>
     </div>
 

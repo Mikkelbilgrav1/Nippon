@@ -48,7 +48,7 @@ body {
 }
 
 /* Styling af h2*/
-h2{
+h1{
     margin-top: 150px;
     font-family: "Teko", sans-serif;
     font-weight: 700;
@@ -386,4 +386,24 @@ h2{
 /* Ændring af knapfarve ved hover */
 .knap2:hover {
     background-color: rgba(123, 177, 236, 1);
+}
+
+/* Add these styles at the end of your css/index.css file */
+
+.menu-items a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu-items a:hover {
+    text-decoration: underline;
+}
+
+.menu-items h2, .menu-items li {
+    cursor: pointer;
+}
+
+/* If you want to change the color of the menu text */
+.menu-items {
+    color: #333; /* Change this to whatever color you prefer */
 }
