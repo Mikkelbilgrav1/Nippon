@@ -39,6 +39,11 @@ main {
     height: auto;
 }
 
+/* Add this new rule to move the indkoeb-icon to the left */
+.ikoner:last-child {
+    margin-right: 35px; /* Adjust this value to move it more or less to the left */
+}
+
 /* Login container styles */
 .login-container {
     display: flex;
