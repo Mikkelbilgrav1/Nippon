@@ -21,7 +21,7 @@ body {
     top:40%;
     left:50%;
     transform: translate(-50%, -50%);
-    color:rgba(67, 67, 67, 1);
+    color:black;
     text-align:center;
     font-family: "Sen", sans-serif;
     font-size: 40px;
