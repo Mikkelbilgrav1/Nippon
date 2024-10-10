@@ -6,6 +6,8 @@
     <title>Nippon Menu</title>
     <link rel="stylesheet" href="burgerogfoot.css">
     <link rel="stylesheet" href="maaltidskasser.css">
+    <script src="burgerogfoot.js"></script>
+    <script src="javascript/maaltidskasser.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&family=Sen:wght@400;700&display=swap" rel="stylesheet">
 
@@ -16,16 +18,13 @@
         <div class="container">
             <div class="ikoner">
                 <img src="images/burgermenu.svg" alt="burgermenu" class="burger-icon" id="burger-icon">
-                <!-- <button class="burger-icon" id="burger-icon" class="ikoner"></button> -->
             </div>
             <div class="logo">
-                <!-- Logo image -->
                 <a href="index.html">
                     <img src="images/logo.svg" alt="logo" class="logo-ikon">
                 </a>
             </div>
             <div class="ikoner">
-                <!-- Shopping cart icon -->
                 <a href="#">
                     <img src="images/indkoebskurv.svg" alt="indkøbskurv" class="indkoeb-icon" id="indkoeb-icon">
                     <span id="cart-count">0</span>
@@ -93,111 +92,111 @@
         </div>
     </div>
 
+<div class="kasse">
 <div class="filter-grid-info">
     <div class="content-wrapper">
         <aside class="filter-box">
             <h2>Filter</h2>
-            <!-- Add your filter options here -->
+            <!-- TILFØJ MINE FILTER MULIGHEDER -->
             <ul class="filter-style">
-                <li><label class="filter"><input type="checkbox"> Sushi</label></li>
+                <li><label class="filter"><input type="checkbox"> Fisk</label></li>
+                <li><label class="filter"><input type="checkbox"> Kylling</label></li>
                 <li><label class="filter"><input type="checkbox"> Ramen</label></li>
-                <li><label class="filter"><input type="checkbox"> Tempura</label></li>
-                <li><label class="filter"><input type="checkbox"> Sushi</label></li>
-                <li><label class="filter"><input type="checkbox"> Ramen</label></li>
-                <li><label class="filter"><input type="checkbox"> Tempura</label></li>
-                <li><label class="filter"><input type="checkbox"> Sushi</label></li>
-                <li><label class="filter"><input type="checkbox"> Ramen</label></li>
-                <li><label class="filter"><input type="checkbox"> Tempura</label></li>
-                <!-- Add more filter options as needed -->
+                <li><label class="filter"><input type="checkbox"> Vegetar</label></li>
+                <li><label class="filter"><input type="checkbox"> Gluten fri</label></li>
+                <li><label class="filter"><input type="checkbox"> Laktose fri</label></li>
+                <!-- TILFØJ DEM JEG HAR BRUG FOR HER -->
             </ul>
         </aside>
     
     <div class="menu">
         <div class="menu-item">
-            <img src="images/sushitest.png" alt="Sushi">
+            <img src="images/maaltidskasser/sushitest.png" alt="Sushi">
             <div class="menu-item-content">
                 <h3>Sushi</h3>
-                <p class="description">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p class="description">Dette er en klassisk japansk ret bestående af frisk rå fisk eller skaldyr, serveret med små risbolde krydret</p>
                 <button class="vaelg-btn">Vælg</button>
             </div>
         </div>
         <div class="menu-item">
-            <img src="ramen.jpg" alt="Ramen">
+            <img src="images/maaltidskasser/Ramen.jpg" alt="Ramen">
             <div class="menu-item-content">
                 <h3>Ramen</h3>
-                <p class="description">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p class="description">Nudelsuppe med en smagfuld bouillon, som kan være baseret på soja, miso, eller salt.</p>
                 <button class="vaelg-btn">Vælg</button>
             </div>
         </div>
         <div class="menu-item">
-            <img src="tempura.jpg" alt="Tempura">
+            <img src="images/maaltidskasser/Tempura.jpg" alt="Tempura">
             <div class="menu-item-content">
                 <h3>Tempura</h3>
-                <p class="description">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p class="description">Tempura er dybstegte grøntsager, fisk eller skaldyr, paneret i en let dej.</p>
                 <button class="vaelg-btn">Vælg</button>
             </div>
         </div>
         <div class="menu-item">
-            <img src="udon.jpg" alt="Udon">
+            <img src="images/maaltidskasser/edamane.jpg" alt="Edamane">
             <div class="menu-item-content">
                 <h3>Udon</h3>
-                <p class="description">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p class="description">Kogte, let saltede sojabønner i deres bælg, der ofte serveres som en snack eller forret.</p>
                 <button class="vaelg-btn">Vælg</button>
             </div>
         </div>
         <div class="menu-item">
-            <img src="yakitori.jpg" alt="Yakitori">
+            <img src="images/maaltidskasser/Yakatari.jpg" alt="Yakitori">
             <div class="menu-item-content">
                 <h3>Yakitori</h3>
-                <p class="description">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p class="description">Grillspyd med stykker af kylling, ofte serveret med en sød eller salt sauce.</p>
                 <button class="vaelg-btn">Vælg</button>
             </div>
         </div>
         <div class="menu-item">
-            <img src="miso.jpg" alt="Miso Suppe">
+            <img src="/images/maaltidskasser/Agedashitofu.jpg" alt="Agedashi tofu">
             <div class="menu-item-content">
                 <h3>Miso Suppe</h3>
-                <p class="description">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p class="description">Dybstegt tofu serveret i en let dashi-bouillon med sojasauce, toppet med forårsløg og revet radise.</p>
                 <button class="vaelg-btn">Vælg</button>
             </div>
         </div>
         <div class="menu-item">
-            <img src="gyoza.jpg" alt="Gyoza">
+            <img src="images/maaltidskasser/takoyaki.jpg" alt="takoyaki">
             <div class="menu-item-content">
                 <h3>Gyoza</h3>
-                <p class="description">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p>
+                <p class="description">Små dejkugler med blækspruttefyld, toppet med takoyaki-sauce, mayonnaise og bonito-flager.</p>
                 <button class="vaelg-btn">Vælg</button>
             </div>
         </div>
         <div class="menu-item">
-            <img src="tonkatsu.jpg" alt="Tonkatsu">
+            <img src="images/maaltidskasser/sashimi.jpg" alt="sashimi">
             <div class="menu-item-content">
                 <h3>Tonkatsu</h3>
-                <p class="description">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p class="description">Tyndt skåret rå fisk eller skaldyr serveret uden ris, ofte med sojasovs og wasabi.</p>
                 <button class="vaelg-btn">Vælg</button>
             </div>
         </div>
         <div class="menu-item">
-            <img src="okonomiyaki.jpg" alt="Okonomiyaki">
+            <img src="images/maaltidskasser/onigiri.jpg" alt="onigiri">
             <div class="menu-item-content">
                 <h3>Okonomiyaki</h3>
-                <p class="description">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p class="description">Risboller, fyldt med ingredienser som laks eller syltet blomme og pakket ind i tang.</p>
                 <button class="vaelg-btn">Vælg</button>
             </div>
         </div>
     </div>
     </div>
+</div>
 
-    
+<div class="info-box-container">
     <div class="info-box">
         <h1>Hvad står vi for?</h1>
         <hr>
         <p>
             "Vi står for autentisk japansk madoplevelse med fokus på kvalitet og smag. Vores retter hylder de traditionelle teknikker og ingredienser fra det japanske køkken, mens vi også tilbyder veganske alternativer som et ekstra supplement for dem, der søger plantebaserede muligheder. Hos os handler det om at dele passionen for japansk mad - tilpasset alle smagsløg."
         </p>
-        <!-- Add more content here -->
+        </div>
     </div>
-</div>
+    </div>
+
 
 </main>
 
@@ -228,7 +227,5 @@
         </div>
     </footer>
 
-    <script src="burgerogfoot.js"></script>
-    <script src="javascript/maaltidskasser.js"></script>
 </body>
 </html>

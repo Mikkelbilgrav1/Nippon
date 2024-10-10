@@ -1,3 +1,12 @@
+h1, h2, h3, li {
+    font-family: 'Teko', sans-serif;
+}
+
+p {
+    font-family: 'Sen', sans-serif;
+}
+
+/* MAIN */
 .hero {
     position: relative;
     height: 75vh;
@@ -34,21 +43,23 @@
 
 .content-wrapper {
     display: flex;
-    flex-direction: column;
     position: relative;
     padding: 20px;
+    flex-direction: row;
 }
 
 .filter-box {
-    width: 100%;
+    width: 200px;
+    margin-right: 20px;
+    margin-bottom: 0;
+    position: sticky;
     background-color: #333;
     color: white;
+    top: 25%;
     padding: 20px;
-    margin-bottom: 20px;
-    position: static;
-    align-self: auto;
-    max-height: none;
-    overflow-y: visible;
+    align-self: flex-start;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
 }
 
 .filter-box h2 {
@@ -75,12 +86,12 @@
     align-items: center;
 }
 
-/*Alt bokse relateret til menuen*/
+/* Bokse til mine menuer & layout valgmuligheder */
 .menu {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 20px;
-    /* padding: 20px; */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    flex: 1;
 }
 
 .menu-item {
@@ -134,15 +145,22 @@
     font-size: 22px;
 }
 
-/* Remove the description for a cleaner look, similar to the image */
+.info-box-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 1%;
+}
+
+.info-box {
+    width: 35%;
+}
+
 .menu-item .description {
     font-family: 'Sen', sans-serif;
     font-size: 14px;
     color: #333;
-    /* Ensure text doesn't overflow */
     overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
 
@@ -159,48 +177,6 @@
     margin-top: auto;
 }
 
-/* Responsive design for different screen sizes */
-@media (min-width: 576px) {
-    .menu {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 768px) {
-    .content-wrapper {
-        flex-direction: row;
-    }
-
-    .filter-box {
-        width: 200px;
-        margin-right: 20px;
-        margin-bottom: 0;
-        position: sticky;
-        top: 25%;
-        align-self: flex-start;
-        max-height: calc(100vh - 40px);
-        overflow-y: auto;
-    }
-
-    .menu {
-        flex: 1;
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 992px) {
-    .menu {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (min-width: 1200px) {
-    .menu {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 30px;
-    }
-}
-
 .filter-grid-info {
     display: flex;
     flex-direction: column;
@@ -208,11 +184,13 @@
 
 .info-box {
     background-color: #e6e6e6;
-    padding: 20px;
-    margin: 20px;
+    padding: 1%;
+    margin: 1%;
     text-align: center;
+    width: 35%;
 }
 
+/* FOOTER */
 footer {
     background-color: #333;
     color: white;
