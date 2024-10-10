@@ -387,3 +387,23 @@ h2{
 .knap2:hover {
     background-color: rgba(123, 177, 236, 1);
 }
+
+/* Add these styles at the end of your css/index.css file */
+
+.menu-items a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu-items a:hover {
+    text-decoration: underline;
+}
+
+.menu-items h2, .menu-items li {
+    cursor: pointer;
+}
+
+/* If you want to change the color of the menu text */
+.menu-items {
+    color: #333; /* Change this to whatever color you prefer */
+}
